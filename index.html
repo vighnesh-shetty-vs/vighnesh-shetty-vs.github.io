@@ -33,15 +33,18 @@
     </style>
 </head>
 
-<body class="bg-slate-900 text-slate-300 relative">
+<body class="bg-slate-900 text-slate-300 relative transition-colors duration-1000 ease-in-out">
 
     <nav class="fixed w-full z-50 top-0 bg-slate-900/80 backdrop-blur-md border-b border-slate-800 transition-all">
         <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
-            <a href="#" class="text-white font-bold text-xl tracking-tight">VS.</a>
+            <a href="#home" class="text-white font-bold text-xl tracking-tight">VS.</a>
             <div class="hidden md:flex gap-6 text-sm font-semibold text-slate-400">
-                <a href="#about" class="hover:text-blue-400 transition-colors">About</a>
-                <a href="#experience" class="hover:text-blue-400 transition-colors">Experience</a>
-                <a href="#projects" class="hover:text-blue-400 transition-colors">Projects</a>
+                <a href="#about"
+                    class="nav-link hover:text-blue-400 transition-all py-1 border-b-2 border-transparent">About</a>
+                <a href="#experience"
+                    class="nav-link hover:text-blue-400 transition-all py-1 border-b-2 border-transparent">Experience</a>
+                <a href="#projects"
+                    class="nav-link hover:text-blue-400 transition-all py-1 border-b-2 border-transparent">Projects</a>
             </div>
             <a href="mailto:vighneshshetty20@gmail.com"
                 class="text-sm font-semibold bg-blue-600/10 text-blue-400 px-4 py-2 rounded-lg border border-blue-600/30 hover:bg-blue-600 hover:text-white transition-all">Contact
@@ -49,7 +52,8 @@
         </div>
     </nav>
 
-    <header class="min-h-screen flex items-center justify-center px-6 pt-28 pb-12 relative overflow-hidden">
+    <header id="home"
+        class="min-h-screen flex items-center justify-center px-6 pt-28 pb-12 relative overflow-hidden section-observe transition-opacity duration-700">
         <div
             class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-blue-600/20 rounded-full blur-[120px] -z-10">
         </div>
@@ -78,13 +82,16 @@
         </div>
     </header>
 
-    <section id="about" class="py-20 bg-slate-800/30 px-6 border-y border-slate-800">
+    <section id="about"
+        class="py-20 px-6 border-y border-slate-800 section-observe transition-opacity duration-700 bg-slate-800/20">
         <div class="max-w-5xl mx-auto">
             <h2 class="text-3xl font-bold text-white mb-12 flex items-center gap-3">
                 <span class="w-8 h-1 bg-blue-500 rounded-full"></span> Background & Education
             </h2>
-            <div class="grid md:grid-cols-2 gap-12 text-lg">
-                <div class="space-y-6 text-slate-400">
+
+            <div class="grid md:grid-cols-2 gap-10 md:gap-16 items-start text-lg">
+
+                <div class="space-y-6 text-slate-400 leading-relaxed pt-2">
                     <p>
                         I am a Fintech-focused Data Analyst with over 2 years of management experience in Core Banking
                         Systems. I specialize in engineering high-volume financial data pipelines and migrating legacy
@@ -98,34 +105,42 @@
                 </div>
 
                 <div class="space-y-6">
+
                     <div
-                        class="bg-slate-800/80 p-6 rounded-xl border border-slate-700 hover:border-blue-500/50 transition-colors">
-                        <div class="flex justify-between items-start mb-2">
-                            <h3 class="text-white font-bold text-xl">Master of Science in Data Analytics for Business
-                            </h3>
-                            <span class="text-blue-400 text-sm font-semibold bg-blue-900/30 px-2 py-1 rounded">Expected
+                        class="bg-slate-800/80 p-6 rounded-xl border border-slate-700 hover:border-blue-500/50 transition-colors flex flex-col h-full">
+                        <div class="flex flex-col sm:flex-row justify-between sm:items-start gap-3 mb-3">
+                            <h3 class="text-white font-bold text-xl leading-snug pr-4">Master of Science in Data
+                                Analytics for Business</h3>
+                            <span
+                                class="text-blue-400 text-sm font-semibold bg-blue-900/30 px-3 py-1 rounded-md whitespace-nowrap self-start shrink-0">Expected
                                 2027</span>
                         </div>
-                        <p class="text-slate-400 text-sm mb-3">KEDGE Business School | Bordeaux, France</p>
-                        <p class="text-xs text-slate-500 font-mono">Statistical Modeling • Predictive Analytics •
-                            Machine Learning • Big Data Architecture</p>
+                        <p class="text-slate-400 text-sm mb-4">KEDGE Business School | Bordeaux, France</p>
+
+                        <div class="mt-auto pt-4 border-t border-slate-700/50">
+                            <p class="text-xs text-slate-500 font-mono leading-relaxed">
+                                Statistical Modeling • Predictive Analytics • Machine Learning • Big Data Architecture
+                            </p>
+                        </div>
                     </div>
 
                     <div
                         class="bg-slate-800/80 p-6 rounded-xl border border-slate-700 hover:border-blue-500/50 transition-colors">
-                        <div class="flex justify-between items-start mb-2">
-                            <h3 class="text-white font-bold text-xl">Bachelor of Engineering, Computer Engineering</h3>
+                        <div class="flex flex-col sm:flex-row justify-between sm:items-start gap-3 mb-3">
+                            <h3 class="text-white font-bold text-xl leading-snug pr-4">Bachelor of Engineering, Computer
+                                Engineering</h3>
                             <span
-                                class="text-slate-400 text-sm font-semibold bg-slate-700 px-2 py-1 rounded">2021</span>
+                                class="text-slate-400 text-sm font-semibold bg-slate-700 px-3 py-1 rounded-md whitespace-nowrap self-start shrink-0">2021</span>
                         </div>
                         <p class="text-slate-400 text-sm">Visvesvaraya Technological University | India</p>
                     </div>
+
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="experience" class="py-24 px-6 relative">
+    <section id="experience" class="py-24 px-6 relative section-observe transition-opacity duration-700">
         <div class="max-w-5xl mx-auto">
             <h2 class="text-3xl font-bold text-white mb-12 flex items-center gap-3">
                 <span class="w-8 h-1 bg-blue-500 rounded-full"></span> Professional Experience
@@ -202,7 +217,8 @@
         </div>
     </section>
 
-    <section id="projects" class="py-24 bg-slate-800/30 px-6 border-y border-slate-800">
+    <section id="projects"
+        class="py-24 px-6 border-y border-slate-800 section-observe transition-opacity duration-700 bg-slate-800/20">
         <div class="max-w-6xl mx-auto">
             <h2 class="text-3xl font-bold text-white mb-12 flex items-center gap-3">
                 <span class="w-8 h-1 bg-blue-500 rounded-full"></span> Technical Projects
@@ -254,9 +270,12 @@
                         </div>
                     </div>
                     <div class="px-6 pb-6 pt-0 mt-auto flex gap-4 border-t border-slate-800 pt-4">
-                        <a href="https://github.com/vighnesh-shetty-vs"
+                        <a href="https://github.com/vighnesh-shetty-vs/Real-Time-Financial-Fraud-Detection-Engine"
                             class="text-slate-300 hover:text-white font-semibold text-sm flex items-center gap-1 transition-colors">GitHub
                             ↗</a>
+                        <a href="https://www.linkedin.com/feed/update/urn:li:activity:7434870386791604224/?originTrackingId=ZsOjdDmV3aMtxKPLSweWHA%3D%3D"
+                            class="text-blue-400 hover:text-blue-300 font-semibold text-sm flex items-center gap-1 transition-colors">Demo
+                            Presentation ↗</a>
                     </div>
                 </div>
 
@@ -308,6 +327,67 @@
                 class="text-blue-400 hover:text-blue-300 font-medium">LinkedIn</a>
         </div>
     </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const sections = document.querySelectorAll('.section-observe');
+            const navLinks = document.querySelectorAll('.nav-link');
+            const body = document.body;
+
+            // Define custom background colors for each section to create the highlight effect
+            const bgThemes = {
+                'home': 'bg-slate-900',
+                'about': 'bg-sky-950',        // Shifts to a deep sky blue
+                'experience': 'bg-indigo-950', // Shifts to a deep indigo
+                'projects': 'bg-slate-900'     // Returns to standard slate
+            };
+
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.4 // Triggers when 40% of a section is visible on screen
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const id = entry.target.getAttribute('id');
+
+                        // 1. Highlight the Navigation Link
+                        navLinks.forEach(link => {
+                            if (link.getAttribute('href') === `#${id}`) {
+                                // Active State
+                                link.classList.add('text-blue-400', 'border-blue-400');
+                                link.classList.remove('text-slate-400', 'border-transparent');
+                            } else {
+                                // Inactive State
+                                link.classList.remove('text-blue-400', 'border-blue-400');
+                                link.classList.add('text-slate-400', 'border-transparent');
+                            }
+                        });
+
+                        // 2. Change the Body Background Highlight
+                        // Remove all existing theme colors first
+                        Object.values(bgThemes).forEach(theme => body.classList.remove(theme));
+                        // Add the new theme color
+                        if (bgThemes[id]) {
+                            body.classList.add(bgThemes[id]);
+                        }
+
+                        // 3. Spotlight the current section by slightly dimming others
+                        sections.forEach(sec => sec.classList.replace('opacity-100', 'opacity-50'));
+                        entry.target.classList.replace('opacity-50', 'opacity-100');
+                    }
+                });
+            }, observerOptions);
+
+            // Start observing all sections
+            sections.forEach(section => {
+                section.classList.add('opacity-50'); // Start slightly dimmed
+                observer.observe(section);
+            });
+        });
+    </script>
 
 </body>
 
